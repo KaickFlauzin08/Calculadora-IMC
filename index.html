@@ -3,27 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora de IMC</title>
+    <title>Calculadora de IMC Animada</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
+    <!-- Bolhas animadas -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
     
-    <h1>Calculadora de IMC</h1>
-    <form action="" id="imcForm">
+    <div class="container">
+      <h1>Calculadora de IMC</h1>
+      <form action="" id="imcForm">
+        <div class="input-group">
+          <label for="peso">Digite seu peso (kg)</label>
+          <i class="fas fa-weight input-icon"></i>
+          <input type="number" name="peso" id="peso" placeholder="Ex: 70.5" step="0.1" required />
+        </div>
 
-      <label for="Peso">Digite seu peso:</label>
-      <input type="text" name="peso" id="peso" required />
+        <div class="input-group">
+          <label for="altura">Digite sua altura (m)</label>
+          <i class="fas fa-ruler-vertical input-icon"></i>
+          <input type="number" name="altura" id="altura" placeholder="Ex: 1.75" step="0.01" required />
+        </div>
 
-      <br />
+        <button type="submit" class="btn-calcular">Calcular IMC</button>
+      </form>
 
-      <label for="Altura">Digite sua altura: </label>
-      <input type="text" name="altura" id="altura" required />
-
-      <button type="submit">Calcule seu IMC</button>
-
-    </form>
-
-    <p id="resultado"></p>
+      <p id="resultado"></p>
+    </div>
 
     <script src="script.js"></script>
   </body>
